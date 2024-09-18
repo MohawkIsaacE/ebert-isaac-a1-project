@@ -48,7 +48,7 @@ else
     {
         Console.WriteLine("You begin picking berries. An oddly shaped berry shines bright in the light. It's a gem! You pick it up.");
         amountOfGems++;
-        Console.WriteLine($"You now have {amountOfGems} gems.");
+        Console.WriteLine($"You now have {amountOfGems} gem(s).");
     }
     else if (choice1 == 2)
     {
@@ -69,11 +69,12 @@ else
     // Choice 5
     Console.WriteLine("You come across a lake. There is a large stone with a sword hilt poking out.");
     Console.WriteLine("1. Go for a swim\n2. Pull the sword out of the stone\n3. Continue walking");
-    if (int.Parse(Console.ReadLine()) == 1)
+    int choice5 = int.Parse(Console.ReadLine());
+    if (choice5 == 1)
     {
         Console.WriteLine("You decide to go for a short swim.\nYou feel refreshed and continue your journey.");
     }
-    else if (int.Parse(Console.ReadLine()) == 2)
+    else if (choice5 == 2)
     {
         // The wizard will help you pull the sword out if you've followed his request (kept him happy)
         Console.WriteLine("You attempt to pull the sword out of the stone, but it's too deep to pull out.");
@@ -82,7 +83,9 @@ else
         {
             Console.WriteLine("Wizard: I see you have completed my favour. For that, I will help you get the sword.");
             hasSword = true;
-            Console.WriteLine("The wizard helps you get the sword.\nYou thank him and continue on.");
+            Console.WriteLine("The wizard helps you get the sword.\nThere's a gem in the sword!");
+            Console.WriteLine($"You now have {amountOfGems} gem(s).");
+            Console.WriteLine("You thank the wizard and continue on.");
         }
         else
         {
@@ -104,7 +107,7 @@ else
     }
     else if (amountOfGems < 6)
     {
-        Console.WriteLine("Your adventure comes to an end.\nYou collected a gem or two. Nice job.\n(Good ending)");
+        Console.WriteLine("Your adventure comes to an end.\nYou collected a gem or two. Nice job.\n(Decent ending)");
     }
     else
     {
