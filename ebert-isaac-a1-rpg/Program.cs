@@ -31,6 +31,7 @@ if (initialOption == 2)
 }
 else
 {
+    // Opening dialogue
     Console.WriteLine("You awake to an unfamiliar voice,");
     Console.WriteLine("Wizard: Hey you, you're finally awake. You were trying to find the 6 gems, right?");
     Console.WriteLine("Wizard: I can give you a hint for your adventure, but you'll have to do me a favour.");
@@ -45,5 +46,8 @@ else
         Console.WriteLine("You refuse the wizard's hint.\nWizard:''Alright then, you're on your own.''");
     }
 
-    // Ask where the player wants to go
+    // Choice 1
+    Console.WriteLine("You leave the wizard and begin your adventure. You stumble upon a berry bush.");
+    Console.WriteLine("1. Eat some berries\n2. Dig up the plant\n3. Continue walking");
+    int choice1 = int.Parse(Console.ReadLine());
 }
