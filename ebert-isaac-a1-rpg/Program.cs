@@ -7,7 +7,7 @@ bool willDoFavour = false;
 bool hasSword = false;
 int amountOfGems = 0;
 int currency = 0;
-int wizard = 100;
+int wizardHappiness = 50;
 
 // Title screen and controls display
 Console.WriteLine("  _____   _____    _____ ");
@@ -32,9 +32,9 @@ else
     Console.WriteLine("Wizard: Hey you, you're finally awake. You were trying to find the 6 gems, right?");
     Console.WriteLine("Wizard: I can give you a hint for your adventure, but you'll have to do me a favour.");
     Console.WriteLine("1. Accept hint\n2. Refuse hint");
-    if (Console.ReadLine() == 1)
+    if (int.Parse(Console.ReadLine()) == 1)
     {
-        willDoFavour = true;
+        wizardHappiness += 50;
         Console.WriteLine("Wizard: Excellent. There's a gem hidden atop the tallest tree in the forest.\nWizard: All I ask for is that you don't harm anything in the forest.");
     }
     else
