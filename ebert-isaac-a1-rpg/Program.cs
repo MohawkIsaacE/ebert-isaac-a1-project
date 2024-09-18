@@ -61,28 +61,30 @@ else
     }
 
     // Choice 2
-    Console.WriteLine("You come across a lake. There is a large stone with a sword hilt.");
+
 
     // Choice 3
-    
+
     // Choice 4
 
     // Choice 5
+    Console.WriteLine("You come across a lake. There is a large stone with a sword hilt poking out.");
+    Console.WriteLine("1. Go for a swim\n2. Pull the sword out of the stone\n3. Continue walking");
 
     // Choice 6
 
     // Ending based on how many gems were collected
     if (amountOfGems == 0)
     {
-        Console.WriteLine("You did not manage to find any gems...\n(Bad ending)");
+        Console.WriteLine("You went for a leisurly stroll.\nYou did not manage to collect any gems...\n(Bad ending)");
     }
     else if (amountOfGems < 6)
     {
-        Console.WriteLine("You managed to collect some gems. Nice job.\n(Good ending)");
+        Console.WriteLine("Your adventure comes to an end.\nYou collected a gem or two. Nice job.\n(Good ending)");
     }
     else
     {
-        Console.WriteLine("You collected all 6 of the gems! Congratulations!\n(Best ending)");
+        Console.WriteLine("Your thrilling adventure went perfectly!\nYou collected all 6 of the gems! Congratulations!\n(Best ending)");
     }
 
     Console.WriteLine("  _______ _            ______           _ ");
