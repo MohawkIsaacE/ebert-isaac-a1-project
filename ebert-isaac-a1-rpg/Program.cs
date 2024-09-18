@@ -6,7 +6,7 @@
 bool willDoFavour = false;
 bool hasSword = false;
 int amountOfGems = 0;
-bool wizardHappiness = true;
+bool isWizardHappy = true;
 
 // Title screen and controls display
 Console.WriteLine("  _____   _____    _____ ");
@@ -48,12 +48,12 @@ else
     {
         Console.WriteLine("You begin picking berries. An oddly shaped berry shines bright in the light. It's a gem! You pick it up.");
         amountOfGems++;
+        Console.WriteLine($"You now have {amountOfGems} gems.");
     }
     else if (choice1 == 2)
     {
         Console.WriteLine("You choose to dig up the plant. You hear a disappointed sigh in the distance.");
-        wizardHappiness = false;
-        Console.WriteLine($"You have {currency} gold.");
+        isWizardHappy = false;
     }
     else
     {
@@ -62,7 +62,6 @@ else
 
     // Choice 2
 
-
     // Choice 3
 
     // Choice 4
@@ -70,13 +69,38 @@ else
     // Choice 5
     Console.WriteLine("You come across a lake. There is a large stone with a sword hilt poking out.");
     Console.WriteLine("1. Go for a swim\n2. Pull the sword out of the stone\n3. Continue walking");
+    if (int.Parse(Console.ReadLine()) == 1)
+    {
+        Console.WriteLine("You decide to go for a short swim.\nYou feel refreshed and continue your journey.");
+    }
+    else if (int.Parse(Console.ReadLine()) == 2)
+    {
+        // The wizard will help you pull the sword out if you've followed his request (kept him happy)
+        Console.WriteLine("You attempt to pull the sword out of the stone, but it's too deep to pull out.");
+        Console.WriteLine("Suddenly, the wizard appears.");
+        if (isWizardHappy)
+        {
+            Console.WriteLine("Wizard: I see you have completed my favour. For that, I will help you get the sword.");
+            hasSword = true;
+            Console.WriteLine("The wizard helps you get the sword.\nYou thank him and continue on.");
+        }
+        else
+        {
+            Console.WriteLine("Wizard: You did not adhear to my request, thus I will not help you free the sword.");
+            Console.WriteLine("You leave in defeat.");
+        }
+    }
+    else
+    {
+        Console.WriteLine("You choose to continue walking.");
+    }
 
     // Choice 6
 
     // Ending based on how many gems were collected
     if (amountOfGems == 0)
     {
-        Console.WriteLine("You went for a leisurly stroll.\nYou did not manage to collect any gems...\n(Bad ending)");
+        Console.WriteLine("You went for a leisurely stroll.\nYou did not manage to collect any gems...\n(Bad ending)");
     }
     else if (amountOfGems < 6)
     {
