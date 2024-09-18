@@ -6,8 +6,7 @@
 bool willDoFavour = false;
 bool hasSword = false;
 int amountOfGems = 0;
-int currency = 0;
-int wizardHappiness = 50;
+bool wizardHappiness = true;
 
 // Title screen and controls display
 Console.WriteLine("  _____   _____    _____ ");
@@ -34,7 +33,6 @@ else
     Console.WriteLine("1. Accept hint\n2. Refuse hint");
     if (int.Parse(Console.ReadLine()) == 1)
     {
-        wizardHappiness += 50;
         Console.WriteLine("Wizard: Excellent. There's a gem hidden atop the tallest tree in the forest.\nWizard: All I ask for is that you don't harm anything in the forest.");
     }
     else
@@ -53,8 +51,8 @@ else
     }
     else if (choice1 == 2)
     {
-        Console.WriteLine("You choose to dig up the plant.\nUnder the plant you notice a yellow glow. It's some gold! You pick it up.");
-        currency += 5;
+        Console.WriteLine("You choose to dig up the plant. You hear a disappointed sigh in the distance.");
+        wizardHappiness = false;
         Console.WriteLine($"You have {currency} gold.");
     }
     else
@@ -63,6 +61,7 @@ else
     }
 
     // Choice 2
+    Console.WriteLine("You come across a lake. There is a large stone with a sword hilt.");
 
     // Choice 3
     
