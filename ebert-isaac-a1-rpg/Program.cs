@@ -60,15 +60,26 @@ else
         Console.WriteLine("You choose to continue walking.");
     }
 
-    Console.WriteLine();
-
     // Choice 2
-
-
-    Console.WriteLine();
+    Console.WriteLine("You arrive at the middle of the forest. You notice a glimmer in the sky.");
+    Console.WriteLine("1. Search around for the glimmer spot\n2. Climb the highest tree\n3. Continue walking");
+    int choice2 = int.Parse(Console.ReadLine());
+    if (choice2 == 1)
+    {
+        Console.WriteLine("You spend some time searching for the source of the glimmer, but you do not find anything.");
+    }
+    else if (choice2 == 2)
+    {
+        Console.WriteLine("You climb the tallest tree you can find. Once reaching the top, you notice a gem in a bird's nest. You grab the gem.");
+        amountOfGems++;
+        Console.WriteLine($"You now have {amountOfGems} gem(s).");
+    }
+    else
+    {
+        Console.WriteLine("You choose to continue walking.");
+    }
 
     // Choice 3
-
     Console.WriteLine();
 
     // Choice 4
@@ -104,8 +115,6 @@ else
         Console.WriteLine("You choose to continue walking.");
     }
 
-    Console.WriteLine();
-
     // Choice 5
     Console.WriteLine("You stumble upon a dragon's lair. The dragon is there guarding something shiny.");
     Console.WriteLine("1. Slay the dragon\n2. Sneak behind the dragon\n3. Continue walking");
@@ -131,8 +140,6 @@ else
     {
         Console.WriteLine("You choose to continue walking.");
     }
-
-    Console.WriteLine();
 
     // Ending based on how many gems were collected
     if (amountOfGems == 0)
