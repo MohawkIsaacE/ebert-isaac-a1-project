@@ -80,7 +80,25 @@ else
     }
 
     // Choice 3
-    Console.WriteLine();
+    Console.WriteLine("You walk through a desert and come upon a sphinx.");
+    Console.WriteLine("Sphinx: Answer my riddle and I will give you a gem.");
+    Console.WriteLine("Sphinx: What starts with E, ends with E, and has only one letter in it?");
+    Console.WriteLine("1. E\n2. The Alphabet\n3. Envelope\n4. Continue walking");
+    int choice3 = int.Parse(Console.ReadLine());
+    if (choice3 == 3)
+    {
+        Console.WriteLine("Sphinx: That is correct. Here is your gem.");
+        amountOfGems++;
+        Console.WriteLine($"You now have {amountOfGems} gem(s).");
+    }
+    else if (choice3 == 4)
+    {
+        Console.WriteLine("You choose to continue walking.");
+    }
+    else
+    {
+        Console.WriteLine("Sphinx: I'm sorry, but your answer is incorrect.");
+    }
 
     // Choice 4
     Console.WriteLine("You come across a lake. There is a large stone with a sword hilt poking out.");
