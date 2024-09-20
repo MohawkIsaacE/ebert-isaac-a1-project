@@ -3,7 +3,6 @@
 // Isaac Ebert
 
 // Variables
-bool willDoFavour = false;
 bool hasSword = false;
 int amountOfGems = 0;
 bool isWizardHappy = true;
