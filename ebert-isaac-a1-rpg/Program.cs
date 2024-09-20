@@ -64,6 +64,7 @@ else
 
     // Choice 2
 
+
     Console.WriteLine();
 
     // Choice 3
@@ -71,18 +72,14 @@ else
     Console.WriteLine();
 
     // Choice 4
-
-    Console.WriteLine();
-
-    // Choice 5
     Console.WriteLine("You come across a lake. There is a large stone with a sword hilt poking out.");
     Console.WriteLine("1. Go for a swim\n2. Pull the sword out of the stone\n3. Continue walking");
-    int choice5 = int.Parse(Console.ReadLine());
-    if (choice5 == 1)
+    int choice4 = int.Parse(Console.ReadLine());
+    if (choice4 == 1)
     {
         Console.WriteLine("You decide to go for a short swim.\nYou feel refreshed and continue your journey.");
     }
-    else if (choice5 == 2)
+    else if (choice4 == 2)
     {
         // The wizard will help you pull the sword out if you've followed his request (kept him happy)
         Console.WriteLine("You attempt to pull the sword out of the stone, but it's too deep to pull out.");
@@ -109,11 +106,11 @@ else
 
     Console.WriteLine();
 
-    // Choice 6
+    // Choice 5
     Console.WriteLine("You stumble upon a dragon's lair. The dragon is there guarding something shiny.");
     Console.WriteLine("1. Slay the dragon\n2. Sneak behind the dragon\n3. Continue walking");
-    int choice3 = int.Parse(Console.ReadLine());
-    if (choice3 == 1)
+    int choice5 = int.Parse(Console.ReadLine());
+    if (choice5 == 1)
     {
         if (hasSword == true)
         {
@@ -126,7 +123,7 @@ else
             Console.WriteLine("You do not have a weapon to slay the dragon with. You leave before anything bad happens.");
         }
     }
-    else if (choice3 == 2)
+    else if (choice5 == 2)
     {
         Console.WriteLine("You try to sneak behind the dragon, but you kick a rock and alert the dragon. You run off before the dragon can catch you.");
     }
@@ -142,7 +139,7 @@ else
     {
         Console.WriteLine("You went for a leisurely stroll.\nYou did not manage to collect any gems...\n(Bad ending)");
     }
-    else if (amountOfGems < 6)
+    else if (amountOfGems < 5)
     {
         Console.WriteLine("Your adventure comes to an end.\nYou collected a gem or two. Nice job.\n(Decent ending)");
     }
