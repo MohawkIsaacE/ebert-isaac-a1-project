@@ -170,7 +170,7 @@ else
     }
     else
     {
-        Console.WriteLine("Your thrilling adventure went perfectly!\nYou collected all 6 of the gems! Congratulations!\n(Best ending)");
+        Console.WriteLine("Your thrilling adventure went perfectly!\nYou collected all 5 of the gems! Congratulations!\n(Best ending)");
     }
 
     Console.WriteLine("  _______ _            ______           _ ");
