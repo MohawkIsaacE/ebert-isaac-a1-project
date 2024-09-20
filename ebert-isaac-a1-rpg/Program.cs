@@ -60,11 +60,19 @@ else
         Console.WriteLine("You choose to continue walking.");
     }
 
+    Console.WriteLine();
+
     // Choice 2
+
+    Console.WriteLine();
 
     // Choice 3
 
+    Console.WriteLine();
+
     // Choice 4
+
+    Console.WriteLine();
 
     // Choice 5
     Console.WriteLine("You come across a lake. There is a large stone with a sword hilt poking out.");
@@ -84,6 +92,7 @@ else
             Console.WriteLine("Wizard: I see you have completed my favour. For that, I will help you get the sword.");
             hasSword = true;
             Console.WriteLine("The wizard helps you get the sword.\nThere's a gem in the sword!");
+            amountOfGems++;
             Console.WriteLine($"You now have {amountOfGems} gem(s).");
             Console.WriteLine("You thank the wizard and continue on.");
         }
@@ -98,7 +107,35 @@ else
         Console.WriteLine("You choose to continue walking.");
     }
 
+    Console.WriteLine();
+
     // Choice 6
+    Console.WriteLine("You stumble upon a dragon's lair. The dragon is there guarding something shiny.");
+    Console.WriteLine("1. Slay the dragon\n2. Sneak behind the dragon\n3. Continue walking");
+    int choice3 = int.Parse(Console.ReadLine());
+    if (choice3 == 1)
+    {
+        if (hasSword == true)
+        {
+            Console.WriteLine("You manage to slay the dragon with your sword. With the dragon slain, you walk to the gem and pick it up.");
+            amountOfGems++;
+            Console.WriteLine($"You now have {amountOfGems} gem(s).");
+        }
+        else
+        {
+            Console.WriteLine("You do not have a weapon to slay the dragon with. You leave before anything bad happens.");
+        }
+    }
+    else if (choice3 == 2)
+    {
+        Console.WriteLine("You try to sneak behind the dragon, but you kick a rock and alert the dragon. You run off before the dragon can catch you.");
+    }
+    else
+    {
+        Console.WriteLine("You choose to continue walking.");
+    }
+
+    Console.WriteLine();
 
     // Ending based on how many gems were collected
     if (amountOfGems == 0)
